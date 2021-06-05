@@ -1,45 +1,21 @@
 const App = () => {
   return (
-    <div>
-      <div className="bg-white shadow p-4 rounded lg:w-64">
-        <div className="text-center mt-4">
-          <p className="text-gray-600 font-bold">Name
-          </p>
-          <p className="text-sm font-hairline text-gray-600 mt-1">Subtitle
-          </p>
-        </div>
-        <div className="flex justify-center mt-4">
-          <img
-            className="shadow sm:w-12 sm:h-12 w-10 h-10 rounded-full"
-            src=""
-            alt="Avatar"
-          />
-        </div>
-        <div className="mt-6 flex justify-between text-center">
-          <div>
-            <p className="text-gray-700 font-bold">20
-            </p>
-            <p className="text-xs mt-2 text-gray-600 font-hairline">Posts
-            </p>
-          </div>
-          <div>
-            <p className="text-gray-700 font-bold">99k
-            </p>
-            <p className="text-xs mt-2 text-gray-600 font-hairline">Likes
-            </p>
-          </div>
-          <div>
-            <p className="text-gray-700 font-bold">530
-            </p>
-            <p className="text-xs mt-2 text-gray-700 font-hairline">Shares
-            </p>
-          </div>
-        </div>
-        <div className="mt-6">
-          <button className="rounded shadow-md w-full items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-400">
-            Follow
-          </button>
-        </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <img
+        className="w-full"
+        src="https://v1.tailwindcss.com/img/card-top.jpg"
+        alt="Sunset in the mountains"
+      />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p className="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
       </div>
     </div>
   );
