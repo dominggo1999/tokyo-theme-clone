@@ -7,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        xs: '500px',
+      },
       fontFamily: {
         mulish: ['Mulish', ' sans-serif'],
         montserrat: ['Montserrat', ' sans-serif'],

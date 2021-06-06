@@ -6,7 +6,6 @@ import 'swiper/swiper.min.css';
 
 const Carousel = () => {
   const images = useGetImages(require.context('../assets/partners', false, /\.(png|jpe?g|svg)$/));
-
   return (
     <div>
       <>

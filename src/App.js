@@ -2,6 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import SideNavbar from './components/SideNavbar';
 import Home from './pages/Home';
 import About from './pages/About';
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
   return (
@@ -17,6 +18,11 @@ const App = () => {
           path="/about"
           exact
           component={About}
+        />
+        <Route
+          path="/portfolio"
+          exact
+          component={Portfolio}
         />
       </Switch>
     </div>

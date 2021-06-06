@@ -5,15 +5,16 @@ import SectionWrapper from '../components/SectionWrapper';
 import SectionGrid from '../components/SectionGrid';
 import StatsCard from '../components/StatsCard';
 import Carousel from '../components/Carousel';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const About = () => {
-  useEffect(() => {
-    document.title = 'Tokyo | About';
-  }, []);
-
+  useDocumentTitle('About');
   return (
-    <div className="h-screen min-h-[400px] w-full p-10 flex flex-col items-center xl:pt-40 xl:pl-[440px] xl:pr-10">
-      <PageTitle />
+    <div className="h-screen min-h-[400px] w-full p-10 flex flex-col items-center xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige">
+      <PageTitle
+        page="about"
+        text="My Story"
+      />
       <div className="min-h-[400px] w-full overflow-hidden">
         <img
           src="https://images.pexels.com/photos/175771/pexels-photo-175771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

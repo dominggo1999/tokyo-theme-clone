@@ -1,15 +1,14 @@
 import { useEffect } from 'react';
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram, AiFillDribbbleCircle, AiFillLinkedin } from 'react-icons/ai';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const imageBgGradient = {
   backgroundImage: 'linear-gradient(322deg, rgba(68,78,94,0.022846638655462215) 0%, rgba(1,79,73,0.7147233893557423) 63%, rgba(27,80,85,1) 90%)',
 };
 
 const Home = () => {
-  useEffect(() => {
-    document.title = 'Tokyo | Home';
-  }, []);
+  useDocumentTitle('Home');
 
   return (
     <div className="section  h-screen min-h-[400px] w-full flex justify-center items-center bg-lightBeige xl:pl-[440px] xl:py-10 xl:pr-10">
