@@ -7,6 +7,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      scale: ['group-hover', 'hover'],
       screens: {
         xs: '500px',
       },

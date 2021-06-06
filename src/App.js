@@ -6,7 +6,7 @@ import Portfolio from './pages/Portfolio';
 
 const App = () => {
   return (
-    <div className="flex">
+    <div className="flex overflow-x-hidden">
       <SideNavbar />
       <Switch>
         <Route

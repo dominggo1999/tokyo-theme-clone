@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PageTitle from '../components/PageTitle';
 import Lightbox from '../components/Lightbox';
@@ -6,6 +7,7 @@ import useGetImages from '../hooks/useGetImages';
 import { showLightbox } from '../redux/lightbox/lightboxActions';
 import SectionGrid from '../components/SectionGrid';
 import PortfolioCard from '../components/PortfolioCard';
+import useSlideIn from '../hooks/useSlideIn';
 
 const Portfolio = () => {
   const { show } = useSelector((state) => state.lightbox);
@@ -13,6 +15,12 @@ const Portfolio = () => {
 
   useDocumentTitle('Portfolio');
   const images = useGetImages(require.context('../assets/portfolio', false, /\.(png|jpe?g|svg)$/));
+
+  const section = useRef(null);
+
+  useEffect(() => {
+    useSlideIn(section.current);
+  }, []);
 
   const portfolioData = images.map((image) => {
     return {
@@ -33,22 +41,27 @@ const Portfolio = () => {
   return (
     <>
       <Lightbox />
-      <div className="h-screen min-h-[400px] w-full p-10 flex flex-col  xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige  ">
-        <PageTitle
-          page="portfolio"
-          text="Creative Portfolio"
-        />
-        <SectionGrid className="grid-cols-2 gap-6 sm:gap-12 pb-20">
-          {portfolioData && portfolioData.map((item) => {
-            return (
-              <PortfolioCard
-                key={item.id}
-                item={item}
-                clickHandler={openLightbox}
-              />
-            );
-          })}
-        </SectionGrid>
+      <div className="h-screen min-h-[400px] w-full p-10 xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige  ">
+        <div
+          ref={section}
+          className="flex flex-col"
+        >
+          <PageTitle
+            page="portfolio"
+            text="Creative Portfolio"
+          />
+          <SectionGrid className="grid-cols-2 gap-6 sm:gap-12 pb-20">
+            {portfolioData && portfolioData.map((item) => {
+              return (
+                <PortfolioCard
+                  key={item.id}
+                  item={item}
+                  clickHandler={openLightbox}
+                />
+              );
+            })}
+          </SectionGrid>
+        </div>
       </div>
     </>
   );
