@@ -1,11 +1,14 @@
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PageTitle from '../components/PageTitle';
 import Lightbox from '../components/Lightbox';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import useGetImages from '../hooks/useGetImages';
 import { showLightbox } from '../redux/lightbox/lightboxActions';
+import SectionGrid from '../components/SectionGrid';
+import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
+  const { show } = useSelector((state) => state.lightbox);
   const dispatch = useDispatch();
 
   useDocumentTitle('Portfolio');
@@ -26,28 +29,26 @@ const Portfolio = () => {
       src: item.src,
     }));
   };
-  console.log(portfolioData);
 
   return (
     <>
       <Lightbox />
-      <div className="h-screen min-h-[400px] w-full p-10 flex flex-col items-center xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige">
+      <div className="h-screen min-h-[400px] w-full p-10 flex flex-col  xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige  ">
         <PageTitle
           page="portfolio"
           text="Creative Portfolio"
         />
-        {
-        portfolioData && portfolioData.map((item) => {
-          return (
-            <button
-              className="cursor-pointer"
-              key={item.id}
-              onClick={() => openLightbox(item)}
-            >{item.src}
-            </button>
-          );
-        })
-      }
+        <SectionGrid className="grid-cols-2 gap-6 sm:gap-10 pb-20">
+          {portfolioData && portfolioData.map((item) => {
+            return (
+              <PortfolioCard
+                key={item.id}
+                item={item}
+                clickHandler={openLightbox}
+              />
+            );
+          })}
+        </SectionGrid>
       </div>
     </>
   );
