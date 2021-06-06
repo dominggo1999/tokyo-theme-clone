@@ -41,7 +41,7 @@ const Portfolio = () => {
   return (
     <>
       <Lightbox />
-      <div className="h-screen min-h-[400px] w-full p-10 xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige  ">
+      <div className="w-full p-10 xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige  ">
         <div
           ref={section}
           className="flex flex-col"

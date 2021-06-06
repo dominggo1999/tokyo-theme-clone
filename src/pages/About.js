@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <div
-      className="h-screen min-h-[400px] w-full p-10  xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige"
+      className="w-full p-10  xl:pt-40 xl:pl-[440px] xl:pr-10 bg-lightBeige"
     >
       <div
         ref={section}
