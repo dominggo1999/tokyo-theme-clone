@@ -41,7 +41,7 @@ const Lightbox = () => {
         <div className="absolute flex justify-center items-center top-0 left-0 h-full w-full p-12 pointer-events-none min-h-[550px]">
           <div className="absolute">
             <ImCancelCircle
-              className="absolute right-5 -top-2 text-xl text-white opacity-50 hover:opacity-100 pointer-events-auto cursor-pointer ease-in-out duration-200"
+              className="absolute top-0 right-0 text-xl text-white opacity-50 hover:opacity-100 pointer-events-auto cursor-pointer ease-in-out duration-200"
               onClick={closeLightbox}
             />
             <img

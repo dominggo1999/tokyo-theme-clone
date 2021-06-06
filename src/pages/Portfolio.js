@@ -38,7 +38,7 @@ const Portfolio = () => {
           page="portfolio"
           text="Creative Portfolio"
         />
-        <SectionGrid className="grid-cols-2 gap-6 sm:gap-10 pb-20">
+        <SectionGrid className="grid-cols-2 gap-6 sm:gap-12 pb-20">
           {portfolioData && portfolioData.map((item) => {
             return (
               <PortfolioCard
