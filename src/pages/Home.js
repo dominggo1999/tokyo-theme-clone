@@ -12,7 +12,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="section  h-screen min-h-[400px] w-full p-10 flex justify-center items-center bg-lightBeige">
+    <div className="section  h-screen min-h-[400px] w-full flex justify-center items-center bg-lightBeige xl:pl-[440px] xl:py-10 xl:pr-10">
       <div className="w-[300px] min-w-[300px] h-[300px] min-h-[300px] overflow-hidden animate-morph rounded-morph relative z-10">
         <div
           className="absolute min-h-full min-w-full shadow-transparentBorder rounded-morph animate-morph z-50"
