@@ -9,16 +9,12 @@ const Lightbox = () => {
   const { show, type, src } = useSelector((state) => state.lightbox);
 
   useEffect(() => {
-    const root = document.getElementById('root');
-
     if(show) {
-      root.style.position = 'fixed';
-      root.style.overflowY = 'scroll';
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      root.style.position = 'static';
-      root.style.overflowY = 'auto';
+      document.body.style.overflow = 'auto';
     };
   }, [show]);
 

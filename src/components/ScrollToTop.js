@@ -4,8 +4,10 @@ import { useEffect } from 'react';
 const ScrollToTop = () => {
   const pathname = useLocation();
 
+  console.log(document.getElementById('root'));
+
   useEffect(() => {
-    document.getElementById('root').scrollTo(0, 0);
+    document.getElementById('main').scrollTo(0, 0);
   }, [pathname]);
 
   return null;

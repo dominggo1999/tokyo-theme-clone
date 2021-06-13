@@ -18,3 +18,7 @@ body {
 .portfolio-card__container:hover .portfolio-card__image {
   @apply transform scale-[1.1];
 }
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+}

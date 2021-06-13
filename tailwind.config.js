@@ -20,6 +20,7 @@ module.exports = {
       },
       boxShadow: {
         transparentBorder: 'inset 0 0 0 9px rgb(255 255 255 / 15%)',
+        card: '0 0 20px rgb(0 0 0 / 7%)',
       },
       borderRadius: {
         morph: '60% 40% 30% 70%/60% 30% 70% 40%',
